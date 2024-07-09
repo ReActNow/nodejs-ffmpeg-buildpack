@@ -52,5 +52,5 @@ echo 'export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:vendor/ffmpeg/lib:vendor/lame/lib
 #echo 'export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:vendor/ffmpeg/lib"' >> $PROFILE_PATH
 
 echo "<---- Install ffmpeg finished"
-ffmpeg -v
+#ffmpeg -v
 
