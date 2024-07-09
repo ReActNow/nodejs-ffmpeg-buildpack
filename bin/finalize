@@ -49,6 +49,12 @@ echo 'ls'
 ls -a 
 ls -a bin
 ls -a lib
+echo 'ls /usr/local/bin'
+ls /usr/local/bin
+echo 'ls /usr/bin'
+ls /usr/bin
+echo 'ls /bin'
+ls /bin'
 echo '$BUILD_DIR'
 echo $BUILD_DIR
 echo '$VENDOR_DIR'
