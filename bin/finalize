@@ -25,7 +25,8 @@ $output_dir/finalize "$BUILD_DIR" "$CACHE_DIR" "$DEPS_DIR" "$DEPS_IDX" "$PROFILE
 echo "-----> Install ffmpeg"
 
 VENDOR_DIR="vendor"
-DOWNLOAD_URL="https://raw.githubusercontent.com/ReActNow/nodejs-ffmpeg-buildpack/main/archive/1.0.0.tar.gz"
+DOWNLOAD_URL="https://raw.githubusercontent.com/ReActNow/nodejs-ffmpeg-buildpack/main/archive/ffmpeg_6.1.1.orig.tar.xz"
+#DOWNLOAD_URL="https://raw.githubusercontent.com/ReActNow/nodejs-ffmpeg-buildpack/main/archive/1.0.0.tar.gz"
 #DOWNLOAD_URL="https://github.com/ReActNow/nodejs-ffmpeg-buildpack/archive/1.0.0.tar.gz"
 #DOWNLOAD_URL="https://github.com/craftsmen/heroku-ffmpeg-lame-bin/archive/1.0.0.tar.gz"
 
