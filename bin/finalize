@@ -37,29 +37,15 @@ echo "DOWNLOAD_URL = " $DOWNLOAD_URL | indent
 cd $BUILD_DIR
 mkdir -p $VENDOR_DIR
 cd $VENDOR_DIR
-curl -L --silent $DOWNLOAD_URL | tar xz --strip-components=1
+#curl -L --silent $DOWNLOAD_URL | tar xz --strip-components=1
+curl -L --silent $DOWNLOAD_URL | tar xz
 
 echo "exporting PATH and LIBRARY_PATH" | indent
 
+#PROFILE_PATH="$BUILD_DIR/.profile.d/ffmpeg-lame.sh"
 PROFILE_PATH="$BUILD_DIR/.profile.d/ffmpeg-lame.sh"
 mkdir -p $(dirname $PROFILE_PATH)
-echo 'export PATH="$PATH:vendor/ffmpeg/bin:vendor/lame/bin"' >> $PROFILE_PATH
-echo 'export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:vendor/ffmpeg/lib:vendor/lame/lib"' >> $PROFILE_PATH
-echo 'ls'
-ls -a 
-ls -a bin
-ls -a lib
-echo 'ls /usr/local/bin'
-ls /usr/local/bin
-echo 'ls /usr/bin'
-ls /usr/bin
-echo 'ls /bin'
-ls /bin'
-echo '$BUILD_DIR'
-echo $BUILD_DIR
-echo '$VENDOR_DIR'
-echo $VENDOR_DIR
-echo '$PATH'
-echo $PATH
-echo '$PROFILE_PATH'
-echo $PROFILE_PATH
+#echo 'export PATH="$PATH:vendor/ffmpeg/bin:vendor/lame/bin"' >> $PROFILE_PATH
+#echo 'export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:vendor/ffmpeg/lib:vendor/lame/lib"' >> $PROFILE_PATH
+echo 'export PATH="$PATH:vendor/ffmpeg/bin"' >> $PROFILE_PATH
+echo 'export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:vendor/ffmpeg/lib"' >> $PROFILE_PATH
