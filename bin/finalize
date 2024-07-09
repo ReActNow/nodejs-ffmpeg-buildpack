@@ -46,7 +46,9 @@ mkdir -p $(dirname $PROFILE_PATH)
 echo 'export PATH="$PATH:vendor/ffmpeg/bin:vendor/lame/bin"' >> $PROFILE_PATH
 echo 'export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:vendor/ffmpeg/lib:vendor/lame/lib"' >> $PROFILE_PATH
 echo 'ls'
-ls
+ls -a 
+ls -a bin
+ls -a lib
 echo '$BUILD_DIR'
 echo $BUILD_DIR
 echo '$VENDOR_DIR'
@@ -55,3 +57,5 @@ echo '$PATH'
 echo $PATH
 echo '$LD_LIBRARY_PATH'
 echo $LD_LIBRARY_PATH
+echo '$PROFILE_PATH'
+echo $PROFILE_PATH
