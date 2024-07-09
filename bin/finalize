@@ -27,25 +27,26 @@ echo "-----> Install ffmpeg"
 VENDOR_DIR="vendor"
 #DOWNLOAD_URL="https://raw.githubusercontent.com/ReActNow/nodejs-ffmpeg-buildpack/main/archive/ffmpeg_6.1.1.orig.tar.xz"
 #DOWNLOAD_URL="https://johnvansickle.com/ffmpeg/builds/ffmpeg-git-amd64-static.tar.xz"
-#DOWNLOAD_URL="https://raw.githubusercontent.com/ReActNow/nodejs-ffmpeg-buildpack/main/archive/1.0.0.tar.gz"
-DOWNLOAD_URL="http://flect.github.io/heroku-binaries/libs/ffmpeg.tar.gz"
+
+#DOWNLOAD_URL="http://flect.github.io/heroku-binaries/libs/ffmpeg.tar.gz"
 #DOWNLOAD_URL="https://github.com/ReActNow/nodejs-ffmpeg-buildpack/archive/1.0.0.tar.gz"
 #DOWNLOAD_URL="https://github.com/craftsmen/heroku-ffmpeg-lame-bin/archive/1.0.0.tar.gz"
+
+DOWNLOAD_URL="https://raw.githubusercontent.com/ReActNow/nodejs-ffmpeg-buildpack/main/archive/1.0.0.tar.gz"
 
 echo "DOWNLOAD_URL = " $DOWNLOAD_URL | indent
 
 cd $BUILD_DIR
 mkdir -p $VENDOR_DIR
 cd $VENDOR_DIR
-#curl -L --silent $DOWNLOAD_URL | tar xz --strip-components=1
-curl -L --silent $DOWNLOAD_URL | tar xz
+curl -L --silent $DOWNLOAD_URL | tar xz --strip-components=1
+#curl -L --silent $DOWNLOAD_URL | tar xz
 
 echo "exporting PATH and LIBRARY_PATH" | indent
 
-#PROFILE_PATH="$BUILD_DIR/.profile.d/ffmpeg-lame.sh"
 PROFILE_PATH="$BUILD_DIR/.profile.d/ffmpeg-lame.sh"
 mkdir -p $(dirname $PROFILE_PATH)
-#echo 'export PATH="$PATH:vendor/ffmpeg/bin:vendor/lame/bin"' >> $PROFILE_PATH
-#echo 'export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:vendor/ffmpeg/lib:vendor/lame/lib"' >> $PROFILE_PATH
-echo 'export PATH="$PATH:vendor/ffmpeg/bin"' >> $PROFILE_PATH
-echo 'export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:vendor/ffmpeg/lib"' >> $PROFILE_PATH
+echo 'export PATH="$PATH:vendor/ffmpeg/bin:vendor/lame/bin"' >> $PROFILE_PATH
+echo 'export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:vendor/ffmpeg/lib:vendor/lame/lib"' >> $PROFILE_PATH
+#echo 'export PATH="$PATH:vendor/ffmpeg/bin"' >> $PROFILE_PATH
+#echo 'export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:vendor/ffmpeg/lib"' >> $PROFILE_PATH
