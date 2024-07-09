@@ -61,7 +61,5 @@ echo '$VENDOR_DIR'
 echo $VENDOR_DIR
 echo '$PATH'
 echo $PATH
-echo '$LD_LIBRARY_PATH'
-echo $LD_LIBRARY_PATH
 echo '$PROFILE_PATH'
 echo $PROFILE_PATH
